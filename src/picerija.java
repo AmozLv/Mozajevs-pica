@@ -6,8 +6,8 @@ public class picerija {
 		int apt=0;
 		int diametri[] = {20, 30, 50};
 		Double cenasPicam[]= {5.99, 6.99, 7.99};
-		Double cenasPiedevam[]= {5.99, 6.99, 7.99};
-		Double cenasMercem[]= {5.99, 6.99, 7.99};
+		Double cenasPiedevam[]= {1.50, 2.00, 2.25};
+		Double cenasMercem[]= {0.50, 0.75, 1.20};
 		String izvele;
 		String izvelne[] = {"Apskatīt ēdienkarti", "Pasūtīt picu", "Apturēt" };
 		String piegade[] = {"Saņemt klātienē", "Piegādāt uz mājām"};
@@ -26,21 +26,22 @@ public class picerija {
 			do {
 				String nosaukums = (String) JOptionPane.showInputDialog(null, "Izv�lies picu", "Izv�le", JOptionPane.INFORMATION_MESSAGE, null, picas, picas[0]);
 			do {
-				 diametrs =  Integer.parseInt(JOptionPane.showInputDialog(null, "Izv�lies picas diametru", diametri));
+				 diametrs =  Integer.parseInt(JOptionPane.showInputDialog(null, "Izv�lies picas diametru"));
 			}while(diametrs != 20|| diametrs != 30||diametrs != 50 );
-			do {
+			//do {
 				String piedeva = (String) JOptionPane.showInputDialog(null, "Izvēlies extra piedevu", "Izvēle", JOptionPane.INFORMATION_MESSAGE, null, piedevas, piedevas[0]);
-				 atk = JOptionPane.showConfirmDialog(null, "Vēlies vēl extra piedevu?", "Papildus?", JOptionPane.YES_NO_OPTION, atk);
-			} while (atk!= JOptionPane.YES_OPTION);
-			do {
+				// atk = JOptionPane.showConfirmDialog(null, "Vēlies vēl extra piedevu?", "Papildus?", JOptionPane.YES_NO_OPTION, atk);
+			//} while (atk!= JOptionPane.YES_OPTION);
+			//do {
 				String merce = (String) JOptionPane.showInputDialog(null, "Izv�lies picu", "Izv�le", JOptionPane.INFORMATION_MESSAGE, null, piedevas, piedevas[0]);
-				atk = JOptionPane.showConfirmDialog(null, "Vēlies vēl extra piedevu?", "Papildus?", JOptionPane.YES_NO_OPTION, atk);
+				//atk = JOptionPane.showConfirmDialog(null, "Vēlies vēl mērci?", "Papildus?", JOptionPane.YES_NO_OPTION, atk);
+			//} while (atk!= JOptionPane.YES_OPTION);
+			
+			pica p1 = new pica(nosaukums, diametrs, piedeva, merce);
+			atk = JOptionPane.showConfirmDialog(null, "Vēlies pasūtīt vēlvienu picu?", "Vēl?", JOptionPane.YES_NO_OPTION, atk);
 			} while (atk!= JOptionPane.YES_OPTION);
 			
-			
-			
-			} while (atk!= JOptionPane.YES_OPTION);
-			
+			String piegadePicas =(String) JOptionPane.showInputDialog(null, "Izv�lies picu", "Izv�le", JOptionPane.INFORMATION_MESSAGE, null, piegade, piegade[0]); 
 			break;
 		case "Apturēt":
 			 apt = JOptionPane.showConfirmDialog(null, "Tiešām vēlies aizvērt programmu?", "Aizvērt?", JOptionPane.YES_NO_OPTION, apt);
