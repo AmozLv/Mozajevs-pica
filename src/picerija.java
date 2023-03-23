@@ -4,34 +4,57 @@ public class picerija {
 
 	public static void main(String[] args) {
 		int apt=0;
+		int diametri[] = {20, 30, 50};
+		Double cenasPicam[]= {5.99, 6.99, 7.99};
+		Double cenasPiedevam[]= {5.99, 6.99, 7.99};
+		Double cenasMercem[]= {5.99, 6.99, 7.99};
 		String izvele;
-		String izvelne[] = {"Apskatît çdienkarti", "Pasûtît picu", "Apturçt" };
-		String piegade[] = {"Saòemt klâtienç", "Piegâdât uz mâjâm"};
-		String picas[] = {"Studentu", "Pepperoni", "Havajas"};
-		String piedevas[] = {"Siers", "Síiòíis", "Pepperoni", "Nav nepiecieğams"};
-		String merces[] = {"Tomâtu", "Asâ", "Èili", "Nav nepiecieğams"};
+		String izvelne[] = {"ApskatÄ«t Ä“dienkarti", "PasÅ«tÄ«t picu", "ApturÄ“t" };
+		String piegade[] = {"SaÅ†emt klÄtienÄ“", "PiegÄdÄt uz mÄjÄm"};
+		String picas[] = {"Studentu "+cenasPicam[0], "Pepperoni "+cenasPicam[1], "Havajas "+cenasPicam[2]};
+		String piedevas[] = {"Siers "+cenasPiedevam[0], "SÄ·iÅ†Ä·is "+cenasPiedevam[1], "Pepperoni "+cenasPiedevam[2], "Nav nepiecieÅ¡ams"};
+		String merces[] = {"TomÄtu "+cenasMercem[0], "AsÄ"+cenasMercem[1], "ÄŒili"+cenasMercem[2], "Nav nepiecieÅ¡ams"};
 		do{
-		izvele = (String) JOptionPane.showInputDialog(null, "Izvçlies darbîbu", "Izvçle", JOptionPane.INFORMATION_MESSAGE, null, izvelne, izvelne[0] );
+		izvele = (String) JOptionPane.showInputDialog(null, "IzvÄ“lies darbÄ«bu", "Izvï¿½le", JOptionPane.INFORMATION_MESSAGE, null, izvelne, izvelne[0] );
 		switch (izvele) {
-		case "Apskatît çdienkarti":
+		case "Apskatï¿½t ï¿½dienkarti":
 			JOptionPane.showMessageDialog(null, " ");
 			break;
-		case "Pasûtît picu":
-			String nosaukums = (String) JOptionPane.showInputDialog(null, "Izvçlies picu", "Izvçle", JOptionPane.INFORMATION_MESSAGE, null, picas, picas[0]);
-			String piedeva = (String) JOptionPane.showInputDialog(null, "Izvçlies picu", "Izvçle", JOptionPane.INFORMATION_MESSAGE, null, piedevas, piedevas[0]);
+		case "PasÅ«tÄ«t picu":
+			int atk=0;
+			int diametrs;
+			do {
+				String nosaukums = (String) JOptionPane.showInputDialog(null, "Izvï¿½lies picu", "Izvï¿½le", JOptionPane.INFORMATION_MESSAGE, null, picas, picas[0]);
+			do {
+				 diametrs =  Integer.parseInt(JOptionPane.showInputDialog(null, "Izvï¿½lies picas diametru", diametri));
+			}while(diametrs != 20|| diametrs != 30||diametrs != 50 );
+			do {
+				String piedeva = (String) JOptionPane.showInputDialog(null, "IzvÄ“lies extra piedevu", "IzvÄ“le", JOptionPane.INFORMATION_MESSAGE, null, piedevas, piedevas[0]);
+				 atk = JOptionPane.showConfirmDialog(null, "VÄ“lies vÄ“l extra piedevu?", "Papildus?", JOptionPane.YES_NO_OPTION, atk);
+			} while (atk!= JOptionPane.YES_OPTION);
+			do {
+				String merce = (String) JOptionPane.showInputDialog(null, "Izvï¿½lies picu", "Izvï¿½le", JOptionPane.INFORMATION_MESSAGE, null, piedevas, piedevas[0]);
+				atk = JOptionPane.showConfirmDialog(null, "VÄ“lies vÄ“l extra piedevu?", "Papildus?", JOptionPane.YES_NO_OPTION, atk);
+			} while (atk!= JOptionPane.YES_OPTION);
+			
+			
+			
+			} while (atk!= JOptionPane.YES_OPTION);
+			
 			break;
-		case "Apturçt":
-			 apt = JOptionPane.showConfirmDialog(null, "Tieğâm vçlies aizvçrt programmu?", "Aizvçrt?", JOptionPane.YES_NO_OPTION, apt);
+		case "ApturÄ“t":
+			 apt = JOptionPane.showConfirmDialog(null, "TieÅ¡Äm vÄ“lies aizvÄ“rt programmu?", "AizvÄ“rt?", JOptionPane.YES_NO_OPTION, apt);
 		if (apt==JOptionPane.YES_OPTION){
-			JOptionPane.showMessageDialog(null, "Programma apturçta!", "Informâcija",JOptionPane.INFORMATION_MESSAGE);
+			JOptionPane.showMessageDialog(null, "Programma apturÄ“ta!", "InformÄcija",JOptionPane.INFORMATION_MESSAGE);
 			System.exit(0);
-			break;
+			
 		}
+		break;
 	
 		default:
 			break;
 			}
-		}while(!izvele.equalsIgnoreCase(""));
+		}while(apt!=JOptionPane.YES_OPTION);
 		
 	}
 
