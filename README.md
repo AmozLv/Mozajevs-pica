@@ -1,8 +1,7 @@
 # Mozajevs-pica
-picērija kur nekas nenotiek
-:pizza:
-![image](https://user-images.githubusercontent.com/129927907/231424815-b5253876-8dd8-4e3f-9000-ec246c9c67fb.png)
 
+![image](https://user-images.githubusercontent.com/129927907/231424815-b5253876-8dd8-4e3f-9000-ec246c9c67fb.png)
+picērija kur nekas nenotiek :pizza:
 
 ### *Darāmo darbu saraksts*
 - [x] Uzsākta lokālā Java projekta versionēšana ar Git
