@@ -9,6 +9,6 @@ picērija kur nekas nenotiek :pizza:
 - [x] Izveidot GitHub krātuvi
 - [x] Lokālo projektu izvietot GitHub
 - [x] Papildināto GitHub saturu iegūt lokālai lietošanai
-- [ ] Projektam pieslēdzies vēl viens programmētājs un izmēģināt kopdarbošanos
+- [ ] Apņemšanās taisīt
 - [x] Projektā ieviests jauns zars
 - [ ] Sapludināti zari, novērsts merge konflikts
